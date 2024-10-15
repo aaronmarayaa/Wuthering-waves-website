@@ -3,13 +3,22 @@
 * {
     box-sizing: border-box;
     font-family: "Poppins";
-    color: #BFC3BA;
+    color: white;
 }
 
 main {
     padding: 1rem 3rem;
 }
 
+body {
+    background-image: url("/assets/images/news-bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Main section */
 img {
     width: 125px;
     float: left;
@@ -17,7 +26,7 @@ img {
 }
 
 .navbar {
-    background-color: #204E4A;
+    backdrop-filter: blur;
     padding: 0.5rem;
     border-radius: 1rem;
 }
@@ -49,6 +58,17 @@ a {
     text-decoration: none;
 }
 
+.news-body {
+    margin: 2rem 1rem;
+}
+
+h1 { 
+    font-weight: 300;
+    font-size: 40px;
+    color: #d2b07a;
+}
+
+/* Media */
 @media (max-width: 1020px) {
     .burger {
         display: block;
@@ -68,7 +88,6 @@ a {
     }
 
     nav ul {
-        background-color: #204E4A;
         border-radius: 0.5rem;
         padding: 1rem;
     }
