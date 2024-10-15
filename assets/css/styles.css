@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+24+Charted&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jacquard+24+Charted&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     font-family: "Poppins";
     color: #BFC3BA;
@@ -10,22 +10,67 @@ main {
     padding: 1rem 3rem;
 }
 
+img {
+    width: 125px;
+    float: left;
+    margin: 0.5rem;
+}
+
 .navbar {
     background-color: #204E4A;
     padding: 0.5rem;
     border-radius: 1rem;
 }
 
+.burger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    float: right;
+    margin: 1rem 0rem;
+}
+
 ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-li{
+li {
     list-style: none;
+    margin: 1rem;
 }
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 1020px) {
+    .burger {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    nav ul {
+        background-color: #204E4A;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+    img {float: none;}
 }
