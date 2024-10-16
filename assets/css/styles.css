@@ -4,6 +4,8 @@
     box-sizing: border-box;
     font-family: "Poppins";
     color: white;
+    text-decoration: none;
+    list-style: none;
 }
 
 main {
@@ -15,7 +17,11 @@ body {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
-    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100%;
 }
 
 /* Main section */
@@ -41,7 +47,7 @@ img {
     margin: 1rem 0rem;
 }
 
-ul {
+nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,23 +55,33 @@ ul {
     align-items: center;
 }
 
-li {
-    list-style: none;
-    margin: 1rem;
-}
+li { margin: 1rem; }
 
-a {
-    text-decoration: none;
-}
+a { text-decoration: none; }
 
-.news-body {
-    margin: 2rem 1rem;
+.news-body { margin: 2rem 1rem; }
+
+.news-body li {
+    padding: 1rem;
 }
 
 h1 { 
     font-weight: 300;
     font-size: 40px;
     color: #d2b07a;
+}
+
+hr { 
+    border: 1px solid #d2b07a; 
+    margin-top: 1rem;
+}
+
+.news-label {
+    border: 1px solid #d2b07a;
+    border-radius: 10px;
+    padding: 5px;
+    color: gray;
+    font-size: small;
 }
 
 /* Media */
@@ -76,11 +92,19 @@ h1 {
     
     nav {
         display: none;
+        position: absolute; /* Make it position above content, but only under the navbar */
+        top: 100px; /* Adjust this value to match the height of your navbar */
+        left: 0;
+        width: 100%;
+        backdrop-filter: blur(10px); /* Optional: Add a blur for a frosted effect */
+        padding: 0.5rem;
+        z-index: 1; /* Ensure nav is above other content */
     }
 
-    ul {
+    nav ul {
         flex-direction: column;
         align-items: center;
+        
     }
 
     nav.show {
