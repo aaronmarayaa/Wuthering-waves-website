@@ -3,10 +3,22 @@ function toggleMenu() {
     const burger = document.querySelector('.burger');
     navMenu.classList.toggle('show');
 
-    // Change the icon
     if (navMenu.classList.contains('show')) {
-        burger.innerHTML = '&times;'; // Change to 'X'
+        burger.innerHTML = '&times;';
     } else {
-        burger.innerHTML = '&#9776;'; // Change back to burger icon
+        burger.innerHTML = '&#9776;';
     }
 }
+
+function showContents(nextSectionClass) {
+    const sections = document.querySelectorAll('.latest-news, .news-news, .notice-news');
+    sections.forEach(section => {
+        section.classList.remove('show'); 
+    });
+    
+    const nextSection = document.querySelector(nextSectionClass);
+    if (nextSection) {
+        nextSection.classList.add('show'); 
+    }
+}
+
