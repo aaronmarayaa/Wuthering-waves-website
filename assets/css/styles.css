@@ -17,6 +17,7 @@ body {
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 section {
@@ -84,6 +85,27 @@ hr {
     font-size: small;
 }
 
+.news-news, .notice-news, .latest-news {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s ease, 0.5s ease;
+}
+
+.news-news.show, .notice-news.show, .latest-news.show {
+    max-height: 50rem;
+    opacity: 1;
+}
+
+.news-navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.news-navbar div {
+    margin-left: 2rem;
+}
+
 /* Media */
 @media (max-width: 1020px) {
     .burger {
@@ -92,21 +114,20 @@ hr {
     
     nav {
         display: none;
-        position: absolute; /* Make it position above content, but only under the navbar */
-        top: 100px; /* Adjust this value to match the height of your navbar */
+        position: absolute;
+        top: 100px;
         left: 0;
         width: 100%;
-        backdrop-filter: blur(10px); /* Optional: Add a blur for a frosted effect */
+        backdrop-filter: blur(10px);
         padding: 0.5rem;
-        z-index: 1; /* Ensure nav is above other content */
+        z-index: 1;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        
-    }
 
+    }
     nav.show {
         display: block;
     }
@@ -115,5 +136,22 @@ hr {
         border-radius: 0.5rem;
         padding: 1rem;
     }
+    
     img {float: none;}
+    body { overflow-x: scroll;}
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #212121;
+    border-color: #212121;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #424242; 
+    border: 2px solid #424242;
 }
