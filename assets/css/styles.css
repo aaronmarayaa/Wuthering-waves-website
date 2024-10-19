@@ -14,8 +14,8 @@ main {
 
 body {
     background-image: url("/assets/images/news-bg.jpg");
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
@@ -25,133 +25,9 @@ section {
     height: 100%;
 }
 
-/* Main section */
-img {
-    width: 125px;
-    float: left;
-    margin: 0.5rem;
-}
-
-.navbar {
-    backdrop-filter: blur;
-    padding: 0.5rem;
-    border-radius: 1rem;
-}
-
-.burger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    width: 50px;
-    float: right;
-    margin: 1rem 0rem;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 li { margin: 1rem; }
-
-a { text-decoration: none; }
-
-.news-body { margin: 2rem 1rem; }
-
-.news-body li {
-    padding: 1rem;
-}
-
-h1 { 
-    font-weight: 300;
-    font-size: 40px;
-    color: #d2b07a;
-}
 
 hr { 
     border: 1px solid #d2b07a; 
     margin-top: 1rem;
-}
-
-.news-label {
-    border: 1px solid #d2b07a;
-    border-radius: 10px;
-    padding: 5px;
-    color: gray;
-    font-size: small;
-}
-
-.news-news, .notice-news, .latest-news {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: 0.5s ease, 0.5s ease;
-}
-
-.news-news.show, .notice-news.show, .latest-news.show {
-    max-height: 50rem;
-    opacity: 1;
-}
-
-.news-navbar {
-    display: flex;
-    flex-direction: row;
-}
-
-.news-navbar div {
-    margin-left: 2rem;
-}
-
-/* Media */
-@media (max-width: 1020px) {
-    .burger {
-        display: block;
-    }
-    
-    nav {
-        display: none;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        backdrop-filter: blur(10px);
-        padding: 0.5rem;
-        z-index: 1;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-
-    }
-    nav.show {
-        display: block;
-    }
-
-    nav ul {
-        border-radius: 0.5rem;
-        padding: 1rem;
-    }
-    
-    img {float: none;}
-    body { overflow-x: scroll;}
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #212121;
-    border-color: #212121;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #424242; 
-    border: 2px solid #424242;
 }
