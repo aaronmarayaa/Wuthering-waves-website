@@ -4,6 +4,13 @@
     --primary: #d2b07a;
 }
 
+.news-section .bg-icon {
+    position: absolute;
+    width: 25rem;
+    top: 30%;
+    left: 25%;
+}
+
 img {
     width: 125px;
     float: left;
@@ -207,6 +214,10 @@ nav ul {
 
     .navbar img {float: none;}
     body { overflow-x: scroll;}
+
+    .news-news.show, .notice-news.show, .latest-news.show {
+        max-height: 50%;
+    }    
 }
 
 ::-webkit-scrollbar {
