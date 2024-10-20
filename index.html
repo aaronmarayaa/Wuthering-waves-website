@@ -14,27 +14,28 @@
     </head>
     <body>
         <main>
-            <section class="news-section">
+            <div class="navbar">
+                <img src="assets/images/wuwa.png" alt="Wuthering Waves">
+                <div class="burger" onclick="toggleMenu()">&#9776;</div>
+                <nav id="navMenu" class="navMenu">
+                    <ul>
+                        <li><a data-section="home" class="nav-link active">Home</a></li>
+                        <li><a data-section="news" class="nav-link">News</a></li>
+                        <li><a data-section="character" class="nav-link">Character</a></li>
+                        <li><a  class="nav-link">Tier list</a></li>
+                        <li><a href="#" class="nav-link">Echoes</a></li>
+                        <li><a href="#" class="nav-link">Weapons</a></li>
+                        <li><a href="#" class="nav-link">Items</a></li>
+                        <li><a href="#" class="nav-link">Game guide</a></li>
+                        <li><a href="#" class="nav-link">Shop</a></li>
+                        <li><a href="#" class="nav-link">Log out</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <section class="news-section content-section">
                 <img src="assets/images/flower-icon.png" alt="icon" class="bg-icon">
-                <div class="navbar">
-                    <img src="assets/images/wuwa.png" alt="Wuthering Waves">
-                    <div class="burger" onclick="toggleMenu()">&#9776;</div>
-                    <nav id="navMenu" class="navMenu">
-                        <ul>
-                            <li><a href="#" class="nav-link active">Home</a></li>
-                            <li><a href="#" class="nav-link">News</a></li>
-                            <li><a href="#" class="nav-link">Character</a></li>
-                            <li><a href="#" class="nav-link">Tier list</a></li>
-                            <li><a href="#" class="nav-link">Echoes</a></li>
-                            <li><a href="#" class="nav-link">Weapons</a></li>
-                            <li><a href="#" class="nav-link">Items</a></li>
-                            <li><a href="#" class="nav-link">Game guide</a></li>
-                            <li><a href="#" class="nav-link">Shop</a></li>
-                            <li><a href="#" class="nav-link">Log out</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
+                
                 <div class="news-body">
                     <div class="news-navbar">
                         <h1>News</h1>
