@@ -34,3 +34,11 @@ hr {
     border: 1px solid #d2b07a; 
     margin-top: 1rem;
 }
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
