@@ -9,16 +9,3 @@ function toggleMenu() {
         burger.innerHTML = '&#9776;';
     }
 }
-
-function showContents(nextSectionClass) {
-    const sections = document.querySelectorAll('.latest-news, .news-news, .notice-news');
-    sections.forEach(section => {
-        section.classList.remove('show'); 
-    });
-    
-    const nextSection = document.querySelector(nextSectionClass);
-    if (nextSection) {
-        nextSection.classList.add('show'); 
-    }
-}
-
