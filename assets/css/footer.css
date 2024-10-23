@@ -1,0 +1,22 @@
+
+footer .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+
+.footer-logo img {
+    margin: 1rem;
+}
+
+.footer-logo img.kuro {
+    width: 14rem;
+}
+
+.footer-text {
+    margin: 1rem 2rem;
+    color: gray;
+    
+    flex: 1;
+}

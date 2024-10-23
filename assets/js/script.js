@@ -15,12 +15,10 @@ document.querySelectorAll('.nav-link').forEach(link => {
         e.preventDefault();
 
         document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
-
-        document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+        document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
 
         this.classList.add('active');
-
         const sectionId = this.getAttribute('data-section');
-        document.getElementById(sectionId).style.display = 'block';
+        document.getElementById(sectionId).classList.add('active');
     });
 });

@@ -1,0 +1,13 @@
+.home-page {
+    display: flex;
+}
+
+.downloads-container .downloads img {
+    width: 11rem;
+    height: 3.5rem;
+}
+
+.downloads {
+    display: grid;
+  grid-template-columns: auto auto auto
+}

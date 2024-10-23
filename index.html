@@ -10,6 +10,10 @@
 
         <link rel="icon" href="assets/images/icon.jpg">
 
+        <link rel="stylesheet" href="assets/css/home-page.css">
+        
+        <link rel="stylesheet" href="assets/css/footer.css">
+
         <title>Wuthering Waves Database & Guides</title>
     </head>
     <body>
@@ -22,18 +26,32 @@
                         <li><a data-section="home" class="nav-link active">Home</a></li>
                         <li><a data-section="news" class="nav-link">News</a></li>
                         <li><a data-section="character" class="nav-link">Character</a></li>
-                        <li><a  class="nav-link">Tier list</a></li>
-                        <li><a href="#" class="nav-link">Echoes</a></li>
-                        <li><a href="#" class="nav-link">Weapons</a></li>
-                        <li><a href="#" class="nav-link">Items</a></li>
-                        <li><a href="#" class="nav-link">Game guide</a></li>
-                        <li><a href="#" class="nav-link">Shop</a></li>
-                        <li><a href="#" class="nav-link">Log out</a></li>
+                        <li><a data-section="tier-list" class="nav-link">Tier list</a></li>
+                        <li><a data-section="echoes" class="nav-link">Echoes</a></li>
+                        <li><a data-section="weapons" class="nav-link">Weapons</a></li>
+                        <li><a data-section="items" class="nav-link">Items</a></li>
+                        <li><a data-section="game-guide" class="nav-link">Game guide</a></li>
+                        <li><a data-section="Shop" class="nav-link">Shop</a></li>
                     </ul>
                 </nav>
             </div>
-            <section id="home" class="home-section content-section">
-                <h1>main section</h1>
+
+            <section id="home" class="home-section content-section active">
+                <div class="home-page">
+                    <div class="downloads-container">
+                        <div class="qr-code">
+                            <img src="assets/images/qrcode_global.jpg" alt="QR Code">
+                        </div>
+                        <div class="downloads">
+                            <img src="assets/images/appstore.png" alt="App store">
+                            <img src="assets/images/googleplay.png" alt="Google play">
+                            <img src="assets/images/googleplay-games.png" alt="Google Play Games" style="width: 15rem;">        
+                            <img src="assets/images/windows.png" alt="Windows">
+                            <img src="assets/images/epic-store.png" alt="Epic Store">
+                            <img src="assets/images/signup.png" alt="Sign Up" style="width: 15rem;"> 
+                        </div>
+                    </div>
+                </div>
             </section>
             
             <section id="news" class="news-section content-section">
@@ -89,6 +107,18 @@
         </main>
         
         <footer>
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="assets/images/kurogame-en-8121fcac.png" alt="Kuro games" class="kuro">
+                    <img src="assets/images/en-footer-1-17c2b236.png" alt="Kuro games">
+                    <img src="assets/images/en-footer-2-134ebce8 (1).png" alt="Kuro games">
+                </div>
+                <div class="footer-text">
+                    Copyright ©KURO GAMES. ALL RIGHTS RESERVED.
+                    Contact: wutheringwaves_ensupport@kurogames.com丨 Privacy Policy丨 Terms of Service
+                    Epic, Epic Games, Epic Games Store, the Epic Games Store logo, and Epic Online Services are trademarks and/or registered trademarks of Epic Games. All other trademarks are the property of their respective owners.
+                </div>
+            </div>
         </footer>
     </body>
     <script src="assets/js/script.js"></script>
