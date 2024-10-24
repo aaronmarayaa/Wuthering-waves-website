@@ -81,6 +81,7 @@
                         <div class="notice-button news-link" onclick="showContents('.notice-news')">Notice</div>
                         <div class="news-button news-link" onclick="showContents('.news-news')">News</div>
                     </div>
+                    <hr>
                     <div class="news-main">
                         <div class="news-article">
                             <div class="latest-news show">
@@ -122,13 +123,127 @@
                 </div>
             </section>
 
-            <section class="character-section content-section">
+            <section id="character" class="character-section content-section">
                 <div class="character-page">
-                    
+                    <div class="character-table">
+                        <select id="element-select">
+                            <option value="all">All Elements</option>
+                            <option value="electro">Electro</option>
+                            <option value="aero">Aero</option>
+                            <option value="spectro">Spectro</option>
+                            <option value="havoc">Havoc</option>
+                            <option value="glacio">Glacio</option>
+                            <option value="fusion">Fusion</option>
+                        </select>
+                        <select id="weapon-select">
+                            <option value="all">All Weapons</option>
+                            <option value="broadblade">Broad blade</option>
+                            <option value="sword">Sword</option>
+                            <option value="pistols">Pistols</option>
+                            <option value="gauntlets">Gauntlets</option>
+                            <option value="rectifiers">Rectifiers</option>
+                        </select>
+                        <div class="character-cell" id="characters-cell">
+                            <div class="five-star"  data-element="electro" data-weapon="broadblade">
+                                <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon" >
+                                <img src="assets/images/character-icons/calcharo-icon.png" alt="Calcharo"> Calcharo
+                            </div>
+                            <div class="five-star" data-weapon="broadblade" data-element="aero">
+                                <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
+                                <img src="assets/images/character-icons/jiyan-icon.png" alt="Jiyan"> Jiyan
+                            </div>
+                            <div class="five-star" data-weapon="broadblade" data-element="spectro">
+                                <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
+                                <img src="assets/images/character-icons/jinhsi-icon.png" alt="Jihnsi">Jinhsi
+                            </div>
+                            <div data-weapon="broadblade"  data-element="havoc">
+                                <img src="assets/images/element-icons/havoc-icon.png" alt="Havoc" class="element-icon">
+                                <img src="assets/images/character-icons/taoqi-icon.png" alt="Taoqi">Taoqi
+                            </div>
+
+                            <div data-element="glacio" data-weapon="sword">
+                                <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
+                                <img src="assets/images/character-icons/sanhua-icon.png" alt="Sanhua">Sanhua
+                            </div>
+                            <div class="five-star" data-element="fusion" data-weapon="sword">
+                                <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
+                                <img src="assets/images/character-icons/changli-icon.png" alt="Changli">Changli</div>
+                            <div data-element="aero" data-weapon="sword">
+                                <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
+                                <img src="assets/images/character-icons/yangyang.png" alt="Yangyan">Yangyang
+                            </div>
+                            <div class="five-star" data-element="spectro" data-weapon="sword">
+                                <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
+                                <img src="assets/images/character-icons/rover(spectro)-icon.png" alt="Rover(Spectro)">Rover(Spectro)
+                            </div>
+                            <div data-element="havoc" data-weapon="sword">
+                                <img src="assets/images/element-icons/havoc-icon.png" alt="Havoc" class="element-icon">
+                                <img src="assets/images/character-icons/danjin-icon.png" alt="Danjin">Danjin
+                            </div>
+                            <div class="five-star" data-element="havoc" data-weapon="sword">
+                                <img src="assets/images/element-icons/havoc-icon.png" alt="Havoc" class="element-icon">
+                                <img src="assets/images/character-icons/rover(havoc)-icon.png" alt="Rover(Havoc)">Rover(Havoc)
+                            </div>
+
+                            <div data-element="fusion" data-weapon="pistols">
+                                <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
+                                <img src="assets/images/character-icons/chixia-icon.png" alt="Chixia">Chixia
+                            </div>
+                            <div data-element="fusion" data-weapon="pistols">
+                                <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
+                                <img src="assets/images/character-icons/morteri-icon.png" alt="Mortefi">Mortefi
+                            </div>
+                            <div data-element="aero" data-weapon="pistols">
+                                <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
+                                <img src="assets/images/character-icons/aalro-icon.png" alt="Aalto">Aalto</div>
+
+                            <div data-element="glacio" data-weapon="gauntlets">
+                                <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
+                                <img src="assets/images/character-icons/youho-icon.png" alt="Youho">Youho
+                            </div>
+                            <div class="five-star" data-element="glacio" data-weapon="gauntlets">
+                                <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
+                                <img src="assets/images/character-icons/lingyang-icon.png" alt="Lingyang">Lingyang
+                            </div>
+                            <div data-element="electro" data-weapon="gauntlets">
+                                <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
+                                <img src="assets/images/character-icons/yuanwu-icon.png" alt="Yuanwu">Yuanwu</div>
+                            <div class="five-star" data-element="electro" data-weapon="gauntlets">
+                                <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
+                                <img src="assets/images/character-icons/xiangliyao-icon.png" alt="Xiangli Yao">Xiangli Yao
+                            </div>
+                            <div class="five-star" data-element="aero" data-weapon="gauntlets">
+                                <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
+                                <img src="assets/images/character-icons/jianxin-icon.png" alt="Jianxin">Jianxin
+                            </div>
+                            <div data-element="glacio" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
+                                <img src="assets/images/character-icons/baizhi-icon.png" alt="Baizhi">Baizhi
+                            </div>
+                            <div data-element="glacio" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
+                                <img src="assets/images/character-icons/zheshi-icon.png" alt="Zheshi"><span class="five-star">Zheshi</span></div>
+
+                            <div class="five-star" data-element="fusion" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
+                                <img src="assets/images/character-icons/encore-icon.png" alt="Encore">Encore</div>
+                            <div class="five-star" data-element="electro" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
+                                <img src="assets/images/character-icons/yinlin-icon.png" alt="Yinlin">Yinlin</div>
+                            <div class="five-star" data-element="spectro" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
+                                <img src="assets/images/character-icons/verina-icon.png" alt="Verina">Verina</div>
+                            <div class="five-star" data-element="spectro" data-weapon="rectifiers">
+                                <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
+                                <img src="assets/images/character-icons/shorekeeper-icon.png" alt="Shorekeeper">Shorekeeper
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </body>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/news-dashboard.js"></script>
+    <script src="assets/js/character-page.js"></script>
 </html>
