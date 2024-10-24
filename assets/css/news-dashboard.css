@@ -1,9 +1,5 @@
 /* Main section */
 
-:root {
-    --primary: #d2b07a;
-}
-
 .news-section .bg-icon {
     position: absolute;
     width: 25rem;
@@ -12,59 +8,6 @@
     position: fixed;
 }
 
-img {
-    width: 125px;
-    float: left;
-    margin: 0.5rem;
-}
-
-.navbar {
-    backdrop-filter: blur;
-    padding: 0.5rem;
-    border-radius: 1rem;
-}
-
-.burger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    width: 50px;
-    float: right;
-    margin: 1rem 0rem;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.navMenu .nav-link {
-    position: relative;
-    padding-bottom: 5px;
-}
-
-.navMenu .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary);
-    left: 0;
-    bottom: 0;
-    transition: width 0.3s ease;
-}
-
-.navMenu .nav-link.active {
-    color: var(--primary);
-}
-
-.navMenu .nav-link.active::after {
-    width: 100%;
-}
 
 .news-navbar {
     display: flex;
@@ -87,14 +30,14 @@ nav ul {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--primary);
+    background-color: var(--highlight);
     left: 0;
     bottom: 0;
     transition: width 0.3s ease;
 }
 
 .news-navbar .news-link.active {
-    color: var(--primary);
+    color: var(--highlight);
 }
 
 .news-navbar .news-link.active::after {
@@ -109,7 +52,7 @@ nav ul {
 .news-body h1{
     font-weight: 300;
     font-size: 30px;
-    color: var(--primary);
+    color: var(--highlight);
 }
 
 .news-body li {
@@ -117,9 +60,13 @@ nav ul {
     width: 100%;
 }
 
+.news-body hr { 
+    border: 1px solid var(--secondary); 
+    margin-top: 1rem;
+}
+
 .news-main {
     display: flex;
-    border-top: 1px solid var(--primary);
     width: 100%;
 }
 
@@ -169,7 +116,7 @@ nav ul {
     width: 42rem;
     height: 28rem;
     opacity: 0;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--secondary);
     border-radius: 0 3rem 0 0;
     transition: opacity 1s ease-in-out;
 }
