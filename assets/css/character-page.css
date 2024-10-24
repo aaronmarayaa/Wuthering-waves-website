@@ -1,0 +1,79 @@
+.character-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1rem 12%;
+}
+
+.character-table {
+    width: 100%;
+}
+
+select {
+    float: right;
+    margin: 0.5rem 1rem;
+    width: 42%;
+    background-color: var(--tertiary);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+  
+select:hover {
+    border-color: #0056b3;
+}
+
+select:focus {
+    border-color: #0056b3;
+}
+
+section > option {
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.character-cell{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.character-cell > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.character-cell .element-icon {
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    position: absolute;
+    width: 1rem;
+}
+
+.character-cell img {
+    width: 6rem;
+}
+
+.five-star {
+    color: var(--highlight);
+}
+
+div.character-cell > div, div.character-head > div {
+    padding: 1rem;
+    background-color: var(--secondary);
+    margin: 1rem;
+    border-radius: 0.5rem;
+    flex: 1;
+}
+
+.selected-element {
+    outline: 2px solid var(--highlight); /* Gold outline */
+}
