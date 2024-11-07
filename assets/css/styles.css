@@ -101,3 +101,9 @@ nav ul {
 .content-section.active {
     display: block;
 }
+
+@media (max-width: 1031px) {
+    main {
+        padding: 0.8rem;
+    }
+}
