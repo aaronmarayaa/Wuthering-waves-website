@@ -29,7 +29,6 @@
                         <li><a data-section="news" class="nav-link">News</a></li>
                         <li><a data-section="character" class="nav-link">Character</a></li>
                         <li><a data-section="tier-list" class="nav-link">Tier list</a></li>
-                        <li><a data-section="echoes" class="nav-link">Echoes</a></li>
                         <li><a data-section="weapons" class="nav-link">Weapons</a></li>
                         <li><a data-section="items" class="nav-link">Items</a></li>
                         <li><a data-section="game-guide" class="nav-link">Game guide</a></li>
@@ -125,7 +124,7 @@
 
             <section id="character" class="character-section content-section">
                 <div class="character-page">
-                    <div class="character-table">
+                    <div class="character-table" id="character-table" onchange="filterCharacters()">
                         <select id="element-select">
                             <option value="all">All Elements</option>
                             <option value="electro">Electro</option>
@@ -137,26 +136,26 @@
                         </select>
                         <select id="weapon-select">
                             <option value="all">All Weapons</option>
-                            <option value="broadblade">Broad blade</option>
+                            <option value="broadblade">BroadBlade</option>
                             <option value="sword">Sword</option>
                             <option value="pistols">Pistols</option>
                             <option value="gauntlets">Gauntlets</option>
                             <option value="rectifiers">Rectifiers</option>
                         </select>
                         <div class="character-cell" id="characters-cell">
-                            <div class="five-star"  data-element="electro" data-weapon="broadblade">
+                            <div class="five-star" data-element="electro" data-weapon="broadblade" onclick="showStats('calcharo')">
                                 <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon" >
                                 <img src="assets/images/character-icons/calcharo-icon.png" alt="Calcharo"> Calcharo
                             </div>
-                            <div class="five-star" data-weapon="broadblade" data-element="aero">
+                            <div class="five-star" data-element="aero" data-weapon="broadblade" onclick="showStats('jiyan')">
                                 <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
                                 <img src="assets/images/character-icons/jiyan-icon.png" alt="Jiyan"> Jiyan
                             </div>
-                            <div class="five-star" data-weapon="broadblade" data-element="spectro">
+                            <div class="five-star" data-weapon="broadblade" data-element="spectro" onclick="showStats('jinhsi')">
                                 <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
                                 <img src="assets/images/character-icons/jinhsi-icon.png" alt="Jihnsi">Jinhsi
                             </div>
-                            <div data-weapon="broadblade"  data-element="havoc">
+                            <div data-weapon="broadblade"  data-element="havoc" onclick="showStats('taoqi')">
                                 <img src="assets/images/element-icons/havoc-icon.png" alt="Havoc" class="element-icon">
                                 <img src="assets/images/character-icons/taoqi-icon.png" alt="Taoqi">Taoqi
                             </div>
@@ -239,11 +238,347 @@
                             </div>
                         </div>
                     </div>
+                    <div class="stats-display" id="statsDisplay" style="display: none;">
+                        <button onclick="showCharacterList()">Back to Character List</button>
+                        <div class="character-card">
+                            <div class="character-image" id="characterImage">
+                                <img src="assets/images/character-img/calcharo-pile.png" alt="" id="characterImageImg">
+                            </div>
+                            <div class="stats-card">
+                                <div class="info">
+                                    <div class="info-bubbles">
+                                        <div class="info-name"><h1 class="characterName"></h1></div>
+                                        <div class="character-weapon" ><img src="" class="character-weapon-icon" id="characterWeaponIcon">
+                                            <span id="characterWeapon"></span>
+                                        </div>
+                                        <div class="character-element" ><img src="" class="character-element-icon" id="characterElementIcon">
+                                            <span id="characterElement"></span>
+                                        </div>
+                                    </div>
+                                    <div class="character-ascencion">
+                                        <div><span class="characterName"></span> Ascension Materials - Max Level: 90</div>
+                                    </div>
+                                    <ul class="ascension-list">
+                                        <li class="consume">
+                                            <div class="cost">20</div>
+                                            <div class="image">
+                                                <img src="" alt="" id="ascensionImage1">
+                                            </div>
+                                            <div class="name" id="ascensionName1"></div>
+                                        </li>
+                                        <li class="consume">
+                                            <div class="cost">20</div>
+                                            <div class="image">
+                                                <img src="" alt="" id="ascensionImage2">
+                                            </div>
+                                            <div class="name" id="ascensionName2"></div>
+                                        </li>
+                                        <li class="consume">
+                                            <div class="cost">4</div>
+                                            <div class="image">
+                                                <img src="" alt="" id="ascensionImage3">
+                                            </div>
+                                            <div class="name" id="ascensionName3"></div>
+                                        </li>
+                                        <li class="consume">
+                                            <div class="cost">80000</div>
+                                            <div class="image">
+                                                <img src="assets/images/ascencion-icons/shell-credit-icon.png" alt="">
+                                            </div>
+                                            <div class="name">Shell Credit</div>
+                                        </li>
+                                    </ul>
+                                    <ul class="baseStats-list">
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/health-icon.png">
+                                            <span>HP</span><span class="stats-val" id="characterHealth">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/attack-icon.png">
+                                            <span>ATK</span><span class="stats-val" id="characterAttack">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/defense-icon.png">
+                                            <span>DEF</span><span class="stats-val" id="characterDefense">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/critRate-icon.png">
+                                            <span>Crit. Rate</span><span class="stats-val" id="characterCRate">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/critDmg-icon.png">
+                                            <span>Crit. DMG</span><span class="stats-val" id="characterCDmg">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/ERegen-icon.png">
+                                            <span>Energy Regen</span><span class="stats-val" id="characterERegen">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <span>Max Resonance Energy</span><span class="stats-val">140</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="build-container">
+                            <h1><span class="characterName" id="characterName"></span> Build</h1>
+                            <p><span class="characterName"></span> Best Weapon</p>
+                            <div class="build-card">
+                                <div class="weapon-echo-card">
+                                    <div class="weapon-card">
+                                        <div class="weapon-img">
+                                            <img src="" id="characterWeaponImage" alt="">
+                                        </div>
+                                        <div class="weapon-details">
+                                            <h3 id="characterWeaponName"></h3>
+                                            <p>Level: 90</p>
+                                            <div class="weapon-attribute" id="weaponAttribute1"></div>
+                                            <div class="weapon-attribute" id="weaponAttribute2"></div>
+                                        </div>
+                                        <div class="weapon-description">
+                                            <p>Rank 5</p>
+                                            <div class="description"><span id="characterWeaponDescription"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="echo-card">
+                                        <p><span class="characterName"></span> Best Echo Set</p>
+                                        <div class="echo-info">
+                                            <p>Echoes(12/12)</p>
+                                            <div class="echo-bubbles">
+                                                <div class="four-cost-bubble">
+                                                    <div class="echo-img">
+                                                        <div class="element"><img src="" class="echo-element"></div>
+                                                        <div class="cost">4</div>
+                                                        <img src="" id="characterEchoImage1">
+                                                    </div>
+                                                    <p id="echoName1"></p>
+                                                </div>
+                                                <div class="three-cost-bubble">
+                                                    <div class="echo-img">
+                                                        <div class="element"><img src="" class="echo-element"></div>
+                                                        <div class="cost">3</div>
+                                                        <img src="" id="characterEchoImage2">
+                                                    </div>
+                                                    <p id="echoName2"></p>
+                                                </div>
+                                                <div class="three-cost-bubble">
+                                                    <div class="echo-img">
+                                                        <div class="element"><img src="" class="echo-element"></div>
+                                                        <div class="cost">3</div>
+                                                        <img src="" alt="" id="characterEchoImage3">
+                                                    </div>
+                                                    <p id="echoName3"></p>
+                                                </div>
+                                                <div class="one-cost-bubble">
+                                                    <div class="echo-img">
+                                                        <div class="element"><img src="" class="echo-element"></div>
+                                                        <div class="cost">1</div>
+                                                        <img src="assets/images/echo-images/electro-predator.png" alt="" id="characterEchoImage4">
+                                                    </div>
+                                                    <p id="echoName4"></p>
+                                                </div>
+                                                <div class="one-cost-bubble">
+                                                    <div class="echo-img">
+                                                        <div class="element"><img src="" class="echo-element"></div>
+                                                        <div class="cost">1</div>
+                                                        <img src="" alt="" id="characterEchoImage5">
+                                                    </div>
+                                                    <p id="echoName5"></p>
+                                                </div>
+                                            </div>
+                                            <div class="echo-attribute">
+                                                <ul>
+                                                    <li id="echoAttribute1"></li>
+                                                    <li id="echoAttribute2"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="echo-ability">
+                                                <p><img src="" alt="" id="echoAbilityIcon"> Echo Ability</p>
+                                                <div class="echo-ability-description">
+                                                    <p id="echoAbilityDescription"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buildStats">
+                                    <ul class="buildStats-list">
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/health-icon.png">
+                                            <span class="stats">HP</span><span class="stats-val" id="buildHealth">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/attack-icon.png">
+                                            <span class="stats">ATK</span><span class="stats-val" id="buildAttack">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/defense-icon.png">
+                                            <span class="stats">DEF</span><span class="stats-val" id="buildDefense">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/critRate-icon.png">
+                                            <span class="stats">Crit. Rate</span><span class="stats-val" id="buildCRate">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/critDmg-icon.png">
+                                            <span class="stats">Crit. DMG</span><span class="stats-val" id="buildCDmg">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/ERegen-icon.png">
+                                            <span class="stats">Energy Regen</span><span class="stats-val" id="buildERegen">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/resSkill-dmg-bonus-icon.png">
+                                            <span class="stats">Resonance Skill DMG Bonus</span><span class="stats-val" id="buildResSkill">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/bAttack-dmg-bonus-icon.png">
+                                            <span class="stats">Basic Attack DMG Bonus</span><span class="stats-val" id="buildBAttack">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/hAtk-dmg-bonus-icon.png">
+                                            <span class="stats">Heavy Attack DMG Bonus</span><span class="stats-val" id="buildHAttack">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/resLib-dmg-bonus-icon.png">
+                                            <span class="stats">Resonance Liberation DMG Bonus</span><span class="stats-val" id="buildResLib">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/glacio-dmg-bonus-icon.png">
+                                            <span class="stats">Glacio DMG Bonus</span><span class="stats-val" id="buildGlacio">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/fusion-dmg-bonus-icon.png">
+                                            <span class="stats">Fusion DMG Bonus</span><span class="stats-val" id="buildFusion">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/electro-dmg-bonus-icon.png">
+                                            <span class="stats">Electro DMG Bonus</span><span class="stats-val" id="buildElectro">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/aero-dmg-bonus-icon.png">
+                                            <span class="stats">Aero DMG Bonus</span><span class="stats-val" id="buildAero">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/spectro-dmg-bonus-icon.png">
+                                            <span class="stats">Spectro DMG Bonus</span><span class="stats-val" id="buildSpectro">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/havoc-dmg-bonus-icon.png">
+                                            <span class="stats">Havoc DMG Bonus</span><span class="stats-val" id="buildHavoc">0</span>
+                                        </li>
+                                        <li class="stats-li">
+                                            <img src="assets/images/stats-images/healing-bonus-icon.png">
+                                            <span class="stats">Healing Bonus</span><span class="stats-val" id="buildHealing">0</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-container">
+                            <h1><span class="characterName"></span> Skills</h1>
+                            <div class="normal-attack">
+                                <p><img src="" id="normalAttackImage"> <span id="normalAttackName"></span>
+                                    - Normal Attack</p>
+                                <div class="normal-attack-details">
+                                    <dl>
+                                        <p id="normalAttack_p"></p>
+                                        <dt id="normalAttack_dt1"></dt>
+                                        <dd id="normalAttack_dd1"></dd>
+                                        
+                                        <dt id="normalAttack_dt2"></dt>
+                                        <dd id="normalAttack_dd2"></dd>
+                                        
+                                        <dt id="normalAttack_dt3"></dt>
+                                        <dd id="normalAttack_dd3"></dd>
+                                        
+                                        <dt id="normalAttack_dt4"></dt>
+                                        <dd id="normalAttack_dd4"></dd>
+                                      </dl>
+                                </div>
+                            </div>
+                            <div class="resonance-skill">
+                                <p><img src="" id="resSkillImage"> <span id="resSkillName"></span>
+                                    - Resonance Skill</p>
+                                <div class="resonance-skill-details">
+                                    <p id="resSkill_p"></p>
+                                    <dl>
+                                        <dt id="resSkill_dt1"></dt>
+                                        <dd id="resSkill_dd1"></dd>
+                                        
+                                        <dt id="resSkill_dt2"></dt>
+                                        <dd id="resSkill_dd2"></dd>
+                                        
+                                        <dt id="resSkill_dt3"></dt>
+                                        <dd id="resSkill_dd3"></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="resonance-liberation">
+                                <p><img src="" id="resLibImage"> <span id="resLibName"></span>
+                                    - Resonance Liberation</p>
+                                <div class="resonance-liberation-details">
+                                    <p id="resLib_p"></p>
+                                    <dl>
+                                        <dt id="resLib_dt1"></dt>
+                                        <dd id="resLib_dd1"></dd>
+                                        <dd id="resLib_dd2"></dd>
+                                        
+                                        <dt id="resLib_dt2"></dt>
+                                        <dd id="resLib_dd3"></dd>
+                                        
+                                        <dt id="resLib_dt3"></dt>
+                                        <dd id="resLib_dd4"></dd>
+                                        
+                                        <dt id="resLib_dt4"></dt>
+                                        <dd id="resLib_dd5"></dd>
+                                        
+                                        <dt id="resLib_dt5"></dt>
+                                        <dd id="resLib_dd6"></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="forte-circuit">
+                                <p><img src="" id="forteCircuitImage"> <span id="forteCircuitName"></span>
+                                    - Forte Circuit</p>
+                                <div class="forte-circuit-details">
+                                    <p id="forteCircuit_p"></p>
+                                    <dl>
+                                        <dt id="forteCircuit_dt1"></dt>
+                                        <dd id="forteCircuit_dd1"></dd>
+                                        
+                                        <dt id="forteCircuit_dt2"></dt>
+                                        <dd id="forteCircuit_dd2"></dd>
+                                        
+                                        <dt id="forteCircuit_dt3"></dt>
+                                        <dd id="forteCircuit_dd3"></dd>
+                                        
+                                        <dt id="forteCircuit_dt4"></dt>
+                                        <dd id="forteCircuit_dd4"></dd>
+                                        
+                                        <dt id="forteCircuit_dt5"></dt>
+                                        <dd id="forteCircuit_dd5"></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="intro-skill">
+                                <p><img src="" id="introSkillImage"> <span id="introSkillName"></span>
+                                    - Intro Skill</p>
+                                <div class="intro-skill-details" id="introSkillDetail"></div>
+                            </div>
+                            <div class="outro-skill">
+                                <p><img src="" id="outroSkillImage"> <span id="outroSkillName"></span>
+                                    - Outro SKill</p>
+                                <div class="outro-skill-details" id="outroSkillDetail"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/news-dashboard.js"></script>
+        <script src="assets/js/character-page.js"></script>
+        <script src="assets/js/character-function.js"></script>
     </body>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/news-dashboard.js"></script>
-    <script src="assets/js/character-page.js"></script>
 </html>
