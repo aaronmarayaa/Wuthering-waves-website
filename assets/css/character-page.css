@@ -4,7 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 1rem 12%;
+    margin: 0 12%;
 }
 
 .character-table {
@@ -75,5 +75,504 @@ div.character-cell > div, div.character-head > div {
 }
 
 .selected-element {
-    outline: 2px solid var(--highlight); /* Gold outline */
+    outline: 2px solid var(--highlight);
+}
+
+/* Character info */
+.stats-display {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.stats-display button {
+    background-color: var(--secondary);
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.stats-display > div {
+    flex: 1;
+}
+
+.character-card .character-image img {
+    width: 27rem;
+}
+
+.character-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.stats-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
+}
+
+.stats-card > div {
+    width: 100%;
+    padding: 1rem;
+    flex: 1;
+}
+
+.stats-card .info-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats-card .info .info-bubbles > div {
+    margin: 10px;
+    padding: 0.5rem 0.9rem 0.5rem 0.5rem;
+}
+
+.character-card 
+.stats-card 
+.info-bubbles .character-weapon, .character-element {
+    border: 3px solid var(--tertiary);
+    border-radius: 1.5rem;
+}
+
+.character-card 
+.stats-card 
+.info-bubbles
+.character-element 
+.character-element-icon, .character-weapon-icon {
+    width: 1rem;
+    margin: 5px 7px;
+}
+
+/* ascension */
+.ascension-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.ascension-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    margin: 2px;
+    padding: 0.3rem 0.3rem;
+    font-size: 0.7rem;
+    position: relative;
+}
+
+.ascension-list .cost {
+    background-color: var(--secondary);
+    border: 1px solid var(--tertiary);
+    padding: 2px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.2rem;
+}
+
+.ascension-list .name {
+    text-align: center;
+    background-color: var(--secondary);
+    padding: 0.3rem;
+    
+    width: 100%;
+    border-radius: 0.2rem;
+}
+
+.ascension-list .consume .image img{
+    width: 3rem;
+}
+
+/* Stats */
+.baseStats-list {
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.baseStats-list .stats-li {
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+}
+
+.baseStats-list .stats-li:nth-child(odd) {
+    background-color: var(--secondary);
+}
+
+.baseStats-list .stats-li img {
+    width: 1.2rem;
+    margin: 5px 7px;
+}
+
+.baseStats-list
+.stats-li .stats-val {
+    float: right;
+}
+
+/* build card */
+.build-container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.build-container > h1 {
+    background-color: var(--tertiary);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.build-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.build-card > div {
+    margin: 0.5rem;
+    flex: 1;
+}
+
+.build-card .weapon-echo-card {
+    flex: 2.5;
+}
+
+.build-card 
+.weapon-echo-card .weapon-card {
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+    padding: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.weapon-card .weapon-img {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.build-card
+.weapon-echo-card
+.weapon-card .weapon-img img {
+    border: 1px solid var(--highlight);
+    border-radius: 0.5rem;
+    background-color: var(--secondary);
+    
+}
+
+.build-card 
+.weapon-echo-card 
+.weapon-card .weapon-details, .weapon-description {
+    margin: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.weapon-card .weapon-description {
+    flex: 2;
+}
+
+.build-card
+.weapon-echo-card
+.weapon-card
+.weapon-description .description {
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.weapon-card
+.weapon-details .weapon-attribute {
+    background-color: var(--secondary);
+    margin: 0.5rem 0.2rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* echo card */
+.build-card
+.weapon-echo-card
+.echo-card p {
+    margin: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card .echo-info {
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card 
+.echo-info > p {
+    text-align: center;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles > div .echo-img {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles
+.four-cost-bubble
+.echo-img > img {
+    outline: 2px solid var(--highlight);
+    border-radius: 30rem;
+    width: 6.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles > div
+.echo-img .element img{
+    background-color: var(--secondary);
+    width: 23px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles > div
+.echo-img .cost {
+    background-color: var(--secondary);
+    width: 30px;
+    padding: 0.2rem 0.1rem;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles
+.three-cost-bubble
+.echo-img > img {
+    outline: 2px solid var(--highlight);
+    border-radius: 30rem;
+    width: 5.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-bubbles
+.one-cost-bubble
+.echo-img > img {
+    outline: 2px solid var(--highlight);
+    border-radius: 30rem;
+    width: 4.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-attribute {
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 1px 1rem;
+    line-height: 1.2rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-attribute ul li {
+    list-style-type: disc;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-ability p > img {
+    width: 2rem;
+    margin: 0;
+    transform: translate(-20%, -20%);
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-ability {
+    background-color: #3d4155;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.build-card
+.weapon-echo-card
+.echo-card
+.echo-ability 
+.echo-ability-description {
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* stats list */
+.buildStats {
+    display: flex;
+    flex: 1;
+}
+
+.buildStats-list {
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.buildStats-list .stats-li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+}
+
+.buildStats-list .stats-li:nth-child(odd) {
+    background-color: var(--secondary);
+}
+
+.buildStats-list .stats-li img{
+    width: 1.2rem;
+    margin: 5px 7px;
+    
+}
+
+.buildStats-list 
+.stats-li .stats {
+    flex: 10;
+}
+
+.buildStats-list
+.stats-li .stats-val{
+    float: right;
+    flex: 1;
+}
+
+/* Skills */
+.skill-container {
+    padding: 1rem;
+    width: 100%;
+}
+
+.skill-container > h1 {
+    background-color: var(--tertiary);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.skill-container > div {
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.skill-container > div > p{
+    padding: 1rem 0;
+}
+
+.skill-container > div > div > p{
+    margin-bottom: 1rem;
+}
+
+.skill-container p img{
+    width: 2rem;
+    transform: translate(-5%, -35%);
+}
+
+
+.skill-container div > div {
+    background-color: var(--secondary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.skill-container dl dt {
+    color: var(--highlight);
+}
+
+.skill-container dl dd {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1031px) {
+    .character-page { 
+        margin: 0 0.1rem;
+        width: 100%; 
+    }
+    .build-card {
+        display: grid;
+        grid-template-columns: auto;
+    }
 }
