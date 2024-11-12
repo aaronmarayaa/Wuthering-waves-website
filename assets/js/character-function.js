@@ -70,7 +70,7 @@ function showStats(characterName) {
     document.getElementById('echoAttribute1').innerText = character.echoAttribute.echoAttribute1;
     document.getElementById('echoAttribute2').innerText = character.echoAttribute.echoAttribute2;
     // normal attack
-    document.getElementById('normalAttackImage').src = character.normalAttack.normalAttackImage;
+    document.getElementById('normalAttackImage').src = character.weapon.weaponIconImage;
     document.getElementById('normalAttackName').innerText = character.normalAttack.normalAttackName;
     const normalAttack = character.normalAttack;
     const normalAttack_keys = [
