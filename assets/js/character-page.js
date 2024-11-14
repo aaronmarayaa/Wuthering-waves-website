@@ -1327,12 +1327,12 @@ const characters = {
         energyRegen: '100%',
         image: '/assets/images/character-img/danjin-pile.png',
         elementImage: '/assets/images/element-icons/havoc-icon.png',
-        ascensionImage1: 'assets/images/ascencion-icons/strife-tacet-icon.png',
+        ascensionImage1: 'assets/images/ascencion-icons/strife-tacet-core-icon.png',
         ascensionName1: "Strife Tacet Core",
         ascensionImage2: 'assets/images/ascencion-icons/belle-poppy-icon.png',
         ascensionName2: "Belle Poppy",
-        ascensionImage3: 'assets/images/ascencion-icons/tailored-icon.png',
-        ascensionName3: "Tailored",
+        ascensionImage3: 'assets/images/ascencion-icons/tailored-ring-icon.png',
+        ascensionName3: "Tailored Ring",
         buildStats: {
             health: 13997,
             attack: 2137,
@@ -1468,7 +1468,324 @@ const characters = {
             outroSkillName: "Duality",
             outroSkillDetail: "The incoming Resonator has their Havoc DMG Amplified by 23% for 14s or until they are switched out."
         }
-    }
+    },
+    rover_havoc: {
+        name: "Rover(Havoc)",
+        rarity: 5,
+        element: "Havoc",
+        health: 10825,
+        attack: 412,
+        defense: 1258,
+        critRate: '5%',
+        critDmg: '150%',
+        energyRegen: '100%',
+        image: '/assets/images/character-img/rover(havoc)-pile.png',
+        elementImage: '/assets/images/element-icons/havoc-icon.png',
+        ascensionImage1: 'assets/images/ascencion-icons/mysterious-code-icon.png',
+        ascensionName1: "Mysterious Code",
+        ascensionImage2: 'assets/images/ascencion-icons/pecok-flower-icon.png',
+        ascensionName2: "Pecok Flower",
+        ascensionImage3: 'assets/images/ascencion-icons/ff-whisperin-core-icon.png',
+        ascensionName3: "FF Whisperin Core",
+        buildStats: {
+            health: 15385,
+            attack: 2258,
+            defense: 1258,
+            critrate: "69.0%",
+            critDmg: "278.6%",
+            eregen: "120.5%",
+            resSkill: "28.2%",
+            basicAttack: 0,
+            heavyAttack: 0,
+            resLib: "27.0%",
+            glacio: 0,
+            fusion: 0,
+            electro: 0,
+            aero: 0,
+            spectro: 0,
+            havoc: "70.0%",
+            healing: 0
+        },
+        weapon: {
+            weaponType: "Sword", 
+            weaponIconImage:'assets/images/weapon-icons/sword-icon.png',
+            weaponName: "Blazing Brillance",
+            weaponImage: 'assets/images/weapon-image/blazing-brillance.png',
+            weaponDescription: "ATK increased by 24%. The wielder gains 1 stack of Searing Feather upon dealing damage, " +
+                        "which can be triggered once every 0.5s, and gains 5 stacks of the same effect upon casting Resonance Skill. " +
+                        "Each stack of Searing Feather gives 8% additional Resonance Skill DMG Bonus for up to 14 stacks. After reaching the max stacks, " +
+                        "all stacks will be removed in 12s.",
+            weaponAttribute1: "ATK 587.50",
+            weaponAttribute2: "Crit. DMG 48.60%"
+        },
+        echoElementImage: 'assets/images/element-icons/w-havoc-icon.png',
+        echoElementOutline: "2px solid #d191b9",
+        echo_four_cost: {
+            echoImage: 'assets/images/echo-images/dreamless.png',
+            echoName: "Dreamless"
+        },
+        echo_three_cost: {
+            echoImage1: 'assets/images/echo-images/roseshroom.png',
+            echoName1: "Roseshroom",
+            echoImage2: 'assets/images/echo-images/tambourinist.png',
+            echoName2: "Tambourinist"
+        },
+        echo_one_cost: {
+            echoImage1: 'assets/images/echo-images/excarat.png',
+            echoName1: "Excarat",
+            echoImage2: 'assets/images/echo-images/havoc-warrior.png',
+            echoName2: "Havoc Warrior"
+        },
+        echoAttribute: {
+            echoAttribute1: "Havoc DMG + 10%.",
+            echoAttribute2: "Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s."
+        },
+        echoAbilityIcon: 'assets/images/echo-images/dreamless-icon.png',
+        echoAbilityDescription: "Transform into Dreamless and perform 6 consecutive strikes. The first 5 strikes deal 54.08% Havoc DMG each, " +
+                    "and the last strike deal 270.40% Havoc DMG. The DMG of this Echo Skill is increased by 50.00% during the first 5s after Rover: " +
+                    "Havoc casts Resonance Liberation: Deadening Abyss. CD: 20s",
+        normalAttack: {
+            normalAttackName: "Tuneslayer",
+            normalAttack_p: "",
+            normalAttack_dt1: "Basic Attack",
+            normalAttack_dd1: "Rover-Havoc performs up to 5 consecutive attacks, dealing Havoc DMG.",
+
+            normalAttack_dt2: "Heavy Attack",
+            normalAttack_dd2: "Rover-Havoc consumes STA to attack, dealing Havoc DMG. Use Basic Attack after casting Heavy Attack to cast Basic Attack 4.",
+
+            normalAttack_dt3: "Mid-air Attack",
+            normalAttack_dd3: "Rover-Havoc consumes STA to cast a Mid-Air Plunging Attack, dealing Havoc DMG.",
+
+            normalAttack_dt4: "Dodge Counter",
+            normalAttack_dd4: "Use Basic Attack after a successful Dodge to attack the target, dealing Havoc DMG."
+        },
+        resSkill: {
+            resSkillImage: 'assets/images/skill-icons/rover_havoc-resSkill.png',
+            resSKillName: "Wingblade",
+            resSKill_p: "Transform sound into feathers, dealing Havoc DMG.",
+            resSkill_dt1: "",
+            resSkill_dd1: "",
+
+            resSkill_dt2: "",
+            resSkill_dd2: "",
+            resSkill_dt3: "",
+            resSkill_dd3: ""
+        },
+        resLib: {
+            resLibImage: 'assets/images/skill-icons/rover_havoc-resLib.png',
+            resLibName: "Deadening Abyss",
+            resLib_p: "Rover gathers resonating sounds to attack a target, dealing Havoc DMG.",
+            resLib_dt1: "",
+            resLib_dd1: "",
+            resLib_dd2: "",
+
+            resLib_dt2: "",
+            resLib_dd3: "",
+
+            resLib_dt3: "",
+            resLib_dd4: "",
+
+            resLib_dt4: "",
+            resLib_dd5: "",
+
+            resLib_dt5: "",
+            resLib_dd6: "",
+        },
+        forteCircuit: {
+            forteCircuitImage: 'assets/images/skill-icons/rover_havoc-forteCircuit.png',
+            forteCircuitName: "Umbra Eclipse",
+            forteCircuit_p: "",
+            forteCircuit_dt1: "Devastation",
+            forteCircuit_dd1: "When \"Umbra\" is full, hold Basic Attack to cast Devastation to attack the target, dealing Havoc DMG, considered as Heavy Attack DMG.",
+
+            forteCircuit_dt2: "Dark Surge",
+            forteCircuit_dd2: "After casting Devastation, Rover enters the Dark Surge state. In this state: " +
+                        "Basic Attack is replaced with Enhanced Basic Attack, which performs up to 5 consecutive attacks, " +
+                        "dealing Havoc DMG. Heavy Attack is replaced with Enhanced Heavy Attack; Use Basic Attack after " +
+                        "casting Enhanced Heavy Attack to cast Heavy Attack Thwackblade to attack the target, dealing Havoc DMG, " +
+                        "considered as Heavy Attack DMG. Use Basic Attack after casting Heavy Attack Thwackblade to cast Enhanced " +
+                        "Basic Attack 3 to attack the target, dealing Havoc DMG; Resonance Skill Wingblade is replaced with Resonance " +
+                        "Skill Lifetaker, transforming sounds into blades to attack the target, dealing Havoc DMG.",
+
+            forteCircuit_dt3: "Umbra",
+            forteCircuit_dd3: "Rover can hold up to 100 points of Umbra. Normal Attack Tuneslayer recovers Umbra on hit. " +
+                        "Resonance Skill Wingblade recovers Umbra when cast. Resonance Skill Lifetaker recovers Umbra when cast. " +
+                        "Intro Skill Instant of Annihilation recovers Umbra when cast.",
+
+            forteCircuit_dt4: "",
+            forteCircuit_dd4: "",
+
+            forteCircuit_dt5: "",
+            forteCircuit_dd5: "",
+        },
+        introSkill: {
+            introSkillImage: 'assets/images/skill-icons/rover_havoc-introSkill.png',
+            introSkillName: "Instant of Annihilation",
+            introSkillDetail: "Attack the target, dealing Havoc DMG."
+        },
+        outroSkill: {
+            outroSkillImage: 'assets/images/skill-icons/danjin-outroSkill.png',
+            outroSkillName: "Soundweaver",
+            outroSkillDetail: "Rover summons a Havoc Field, dealing Havoc DMG of 143.3% of Rover's ATK to all targets within the range every 2s for 6s."
+        }
+    },
+    chixia: {
+        name: "Chixia",
+        rarity: 4,
+        element: "Fusion",
+        health: 9087,
+        attack: 300,
+        defense: 953,
+        critRate: '5%',
+        critDmg: '150%',
+        energyRegen: '100%',
+        image: '/assets/images/character-img/chixia-pile.png',
+        elementImage: '/assets/images/element-icons/fusion-icon.png',
+        ascensionImage1: 'assets/images/ascencion-icons/rage-tacet-core-icon.png',
+        ascensionName1: "Rage Tacet Core",
+        ascensionImage2: 'assets/images/ascencion-icons/belle-poppy-icon.png',
+        ascensionName2: "Belle Poppy",
+        ascensionImage3: 'assets/images/ascencion-icons/ff-whisperin-core-icon.png',
+        ascensionName3: "FF Whisperin Core",
+        buildStats: {
+            health: 13645,
+            attack: 2206,
+            defense: 953,
+            critrate: "71.3%",
+            critDmg: "278.0%",
+            eregen: "130.8%",
+            resSkill: "9.2%",
+            basicAttack: 0,
+            heavyAttack: 0,
+            resLib: "9.0%",
+            glacio: 0,
+            fusion: "70.0%",
+            electro: 0,
+            aero: 0,
+            spectro: 0,
+            havoc: 0,
+            healing: 0
+        },
+        weapon: {
+            weaponType: "Pistols", 
+            weaponIconImage:'assets/images/weapon-icons/pistols-icon.png',
+            weaponName: "Static Mis",
+            weaponImage: 'assets/images/weapon-image/static-mist.png',
+            weaponDescription: "Increases Energy Regen by 25.6%. When Outro Skill is cast, increases the incoming Resonator's ATK by 20%, stacking up to 1 time(s). This effect lasts for 14s.",
+            weaponAttribute1: "ATK 587.50",
+            weaponAttribute2: "Crit. DMG 48.60%"
+        },
+        echoElementImage: 'assets/images/element-icons/w-havoc-icon.png',
+        echoElementOutline: "2px solid #d191b9",
+        echo_four_cost: {
+            echoImage: 'assets/images/echo-images/dreamless.png',
+            echoName: "Dreamless"
+        },
+        echo_three_cost: {
+            echoImage1: 'assets/images/echo-images/roseshroom.png',
+            echoName1: "Roseshroom",
+            echoImage2: 'assets/images/echo-images/tambourinist.png',
+            echoName2: "Tambourinist"
+        },
+        echo_one_cost: {
+            echoImage1: 'assets/images/echo-images/excarat.png',
+            echoName1: "Excarat",
+            echoImage2: 'assets/images/echo-images/havoc-warrior.png',
+            echoName2: "Havoc Warrior"
+        },
+        echoAttribute: {
+            echoAttribute1: "Havoc DMG + 10%.",
+            echoAttribute2: "Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s."
+        },
+        echoAbilityIcon: 'assets/images/echo-images/dreamless-icon.png',
+        echoAbilityDescription: "Transform into Dreamless and perform 6 consecutive strikes. The first 5 strikes deal 54.08% Havoc DMG each, " +
+                    "and the last strike deal 270.40% Havoc DMG. The DMG of this Echo Skill is increased by 50.00% during the first 5s after Rover: " +
+                    "Havoc casts Resonance Liberation: Deadening Abyss. CD: 20s",
+        normalAttack: {
+            normalAttackName: "Tuneslayer",
+            normalAttack_p: "",
+            normalAttack_dt1: "Basic Attack",
+            normalAttack_dd1: "Rover-Havoc performs up to 5 consecutive attacks, dealing Havoc DMG.",
+
+            normalAttack_dt2: "Heavy Attack",
+            normalAttack_dd2: "Rover-Havoc consumes STA to attack, dealing Havoc DMG. Use Basic Attack after casting Heavy Attack to cast Basic Attack 4.",
+
+            normalAttack_dt3: "Mid-air Attack",
+            normalAttack_dd3: "Rover-Havoc consumes STA to cast a Mid-Air Plunging Attack, dealing Havoc DMG.",
+
+            normalAttack_dt4: "Dodge Counter",
+            normalAttack_dd4: "Use Basic Attack after a successful Dodge to attack the target, dealing Havoc DMG."
+        },
+        resSkill: {
+            resSkillImage: 'assets/images/skill-icons/rover_havoc-resSkill.png',
+            resSKillName: "Wingblade",
+            resSKill_p: "Transform sound into feathers, dealing Havoc DMG.",
+            resSkill_dt1: "",
+            resSkill_dd1: "",
+
+            resSkill_dt2: "",
+            resSkill_dd2: "",
+            resSkill_dt3: "",
+            resSkill_dd3: ""
+        },
+        resLib: {
+            resLibImage: 'assets/images/skill-icons/rover_havoc-resLib.png',
+            resLibName: "Deadening Abyss",
+            resLib_p: "Rover gathers resonating sounds to attack a target, dealing Havoc DMG.",
+            resLib_dt1: "",
+            resLib_dd1: "",
+            resLib_dd2: "",
+
+            resLib_dt2: "",
+            resLib_dd3: "",
+
+            resLib_dt3: "",
+            resLib_dd4: "",
+
+            resLib_dt4: "",
+            resLib_dd5: "",
+
+            resLib_dt5: "",
+            resLib_dd6: "",
+        },
+        forteCircuit: {
+            forteCircuitImage: 'assets/images/skill-icons/rover_havoc-forteCircuit.png',
+            forteCircuitName: "Umbra Eclipse",
+            forteCircuit_p: "",
+            forteCircuit_dt1: "Devastation",
+            forteCircuit_dd1: "When \"Umbra\" is full, hold Basic Attack to cast Devastation to attack the target, dealing Havoc DMG, considered as Heavy Attack DMG.",
+
+            forteCircuit_dt2: "Dark Surge",
+            forteCircuit_dd2: "After casting Devastation, Rover enters the Dark Surge state. In this state: " +
+                        "Basic Attack is replaced with Enhanced Basic Attack, which performs up to 5 consecutive attacks, " +
+                        "dealing Havoc DMG. Heavy Attack is replaced with Enhanced Heavy Attack; Use Basic Attack after " +
+                        "casting Enhanced Heavy Attack to cast Heavy Attack Thwackblade to attack the target, dealing Havoc DMG, " +
+                        "considered as Heavy Attack DMG. Use Basic Attack after casting Heavy Attack Thwackblade to cast Enhanced " +
+                        "Basic Attack 3 to attack the target, dealing Havoc DMG; Resonance Skill Wingblade is replaced with Resonance " +
+                        "Skill Lifetaker, transforming sounds into blades to attack the target, dealing Havoc DMG.",
+
+            forteCircuit_dt3: "Umbra",
+            forteCircuit_dd3: "Rover can hold up to 100 points of Umbra. Normal Attack Tuneslayer recovers Umbra on hit. " +
+                        "Resonance Skill Wingblade recovers Umbra when cast. Resonance Skill Lifetaker recovers Umbra when cast. " +
+                        "Intro Skill Instant of Annihilation recovers Umbra when cast.",
+
+            forteCircuit_dt4: "",
+            forteCircuit_dd4: "",
+
+            forteCircuit_dt5: "",
+            forteCircuit_dd5: "",
+        },
+        introSkill: {
+            introSkillImage: 'assets/images/skill-icons/rover_havoc-introSkill.png',
+            introSkillName: "Instant of Annihilation",
+            introSkillDetail: "Attack the target, dealing Havoc DMG."
+        },
+        outroSkill: {
+            outroSkillImage: 'assets/images/skill-icons/danjin-outroSkill.png',
+            outroSkillName: "Soundweaver",
+            outroSkillDetail: "Rover summons a Havoc Field, dealing Havoc DMG of 143.3% of Rover's ATK to all targets within the range every 2s for 6s."
+        }
+    },
 };
 
 function showCharacterList() {
