@@ -1,0 +1,94 @@
+.tierlist-page {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tierlist-page .list > div{
+    padding: 1rem;
+}
+
+.tierlist-section
+.tierlist-page 
+.list .tier-zero {
+    width: 100%;
+    display: flex;
+}
+.tierlist-section
+.tierlist-page 
+.list .tier-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #1a1a26;
+    padding: 1rem;
+}
+
+.tierlist-section
+.tierlist-page 
+.list .title {
+    padding: 6rem 2.5rem;
+    border-radius: 1rem 0 0 1rem;
+    width: 7rem;
+    color: black;
+    font-weight: bold;
+}
+
+.tierlist-section
+.tierlist-page 
+.list .img img {
+    width: 7rem;
+    border-radius: 0.5rem;
+    border: 1px solid #3b3a54;
+    padding: 0.5rem 0.5rem 0;
+}
+
+.tierlist-page 
+.list .tier-cards .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+}
+
+.tierlist-page 
+.list .tier-cards 
+.card .damage-type {
+    font-size: 0.6rem;
+}
+
+.tierlist-section
+.tierlist-page 
+.list .zero {
+    background-color: #ef5350;
+}
+.tierlist-section
+.tierlist-page 
+.list .pointfive {
+    background-color: #ec6563;
+}
+.tierlist-section
+.tierlist-page 
+.list .one {
+    background-color: #ffa967;
+}
+.tierlist-section
+.tierlist-page 
+.list .onepointfive {
+    background-color: #ffbe7c;
+}
+.tierlist-section
+.tierlist-page 
+.list .two {
+    background-color: #fed4a0;
+}
+.tierlist-section
+.tierlist-page 
+.list .three {
+    background-color: #bfff7f;
+}
