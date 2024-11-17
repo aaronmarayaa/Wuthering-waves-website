@@ -73,9 +73,9 @@
                 <div class="news-body">
                     <div class="news-navbar">
                         <h1>News</h1>
-                        <div onclick="showContents('.latest-news')" class="news-link active">Latest</div>
-                        <div class="notice-button news-link" onclick="showContents('.notice-news')">Notice</div>
-                        <div class="news-button news-link" onclick="showContents('.news-news')">News</div>
+                        <div onclick="showLatestNews()" class="news-link active">Latest</div>
+                        <div class="notice-button news-link" onclick="showNoticeNews()">Notice</div>
+                        <div class="news-button news-link" onclick="showNewsNews()">News</div>
                     </div>
                     <hr>
                     <div class="news-main">
@@ -185,51 +185,51 @@
                                 <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
                                 <img src="assets/images/character-icons/chixia-icon.png" alt="Chixia">Chixia
                             </div>
-                            <div data-element="fusion" data-weapon="pistols">
+                            <div data-element="fusion" data-weapon="pistols" onclick="showStats('mortefi')">
                                 <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
                                 <img src="assets/images/character-icons/morteri-icon.png" alt="Mortefi">Mortefi
                             </div>
-                            <div data-element="aero" data-weapon="pistols">
+                            <div data-element="aero" data-weapon="pistols" onclick="showStats('aalto')">
                                 <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
                                 <img src="assets/images/character-icons/aalro-icon.png" alt="Aalto">Aalto</div>
 
-                            <div data-element="glacio" data-weapon="gauntlets">
+                            <div data-element="glacio" data-weapon="gauntlets" onclick="showStats('youho')">
                                 <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
                                 <img src="assets/images/character-icons/youho-icon.png" alt="Youho">Youho
                             </div>
-                            <div class="five-star" data-element="glacio" data-weapon="gauntlets">
+                            <div class="five-star" data-element="glacio" data-weapon="gauntlets" onclick="showStats('lingyang')">
                                 <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
                                 <img src="assets/images/character-icons/lingyang-icon.png" alt="Lingyang">Lingyang
                             </div>
-                            <div data-element="electro" data-weapon="gauntlets">
+                            <div data-element="electro" data-weapon="gauntlets" onclick="showStats('yuanwu')">
                                 <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
                                 <img src="assets/images/character-icons/yuanwu-icon.png" alt="Yuanwu">Yuanwu</div>
-                            <div class="five-star" data-element="electro" data-weapon="gauntlets">
+                            <div class="five-star" data-element="electro" data-weapon="gauntlets" onclick="showStats('xiangliyao')">
                                 <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
                                 <img src="assets/images/character-icons/xiangliyao-icon.png" alt="Xiangli Yao">Xiangli Yao
                             </div>
-                            <div class="five-star" data-element="aero" data-weapon="gauntlets">
+                            <div class="five-star" data-element="aero" data-weapon="gauntlets" onclick="showStats('jianxin')">
                                 <img src="assets/images/element-icons/aero-icon.png" alt="Aero" class="element-icon">
                                 <img src="assets/images/character-icons/jianxin-icon.png" alt="Jianxin">Jianxin
                             </div>
-                            <div data-element="glacio" data-weapon="rectifiers">
+                            <div data-element="glacio" data-weapon="rectifiers" onclick="showStats('baizhi')">
                                 <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
                                 <img src="assets/images/character-icons/baizhi-icon.png" alt="Baizhi">Baizhi
                             </div>
-                            <div data-element="glacio" data-weapon="rectifiers">
+                            <div class="five-star" data-element="glacio" data-weapon="rectifiers" onclick="showStats('zhezhi')">
                                 <img src="assets/images/element-icons/glacio-icon.png" alt="Glacio" class="element-icon">
-                                <img src="assets/images/character-icons/zheshi-icon.png" alt="Zheshi"><span class="five-star">Zheshi</span></div>
+                                <img src="assets/images/character-icons/zheshi-icon.png" alt="Zheshi"><span class="five-star">Zhezhi</span></div>
 
-                            <div class="five-star" data-element="fusion" data-weapon="rectifiers">
+                            <div class="five-star" data-element="fusion" data-weapon="rectifiers" onclick="showStats('encore')">
                                 <img src="assets/images/element-icons/fusion-icon.png" alt="Fusion" class="element-icon">
                                 <img src="assets/images/character-icons/encore-icon.png" alt="Encore">Encore</div>
-                            <div class="five-star" data-element="electro" data-weapon="rectifiers">
+                            <div class="five-star" data-element="electro" data-weapon="rectifiers" onclick="showStats('yinlin')">
                                 <img src="assets/images/element-icons/electro-icon.png" alt="Electro" class="element-icon">
                                 <img src="assets/images/character-icons/yinlin-icon.png" alt="Yinlin">Yinlin</div>
-                            <div class="five-star" data-element="spectro" data-weapon="rectifiers">
+                            <div class="five-star" data-element="spectro" data-weapon="rectifiers" onclick="showStats('verina')">
                                 <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
                                 <img src="assets/images/character-icons/verina-icon.png" alt="Verina">Verina</div>
-                            <div class="five-star" data-element="spectro" data-weapon="rectifiers">
+                            <div class="five-star" data-element="spectro" data-weapon="rectifiers" onclick="showStats('shorekeeper')">
                                 <img src="assets/images/element-icons/spectro-icon.png" alt="Spectro" class="element-icon">
                                 <img src="assets/images/character-icons/shorekeeper-icon.png" alt="Shorekeeper">Shorekeeper
                             </div>

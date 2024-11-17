@@ -1,24 +1,24 @@
-function showContents(nextSectionClass) {
-    const sections = document.querySelectorAll('.latest-news, .news-news, .notice-news');
-    sections.forEach(section => {
-        section.classList.remove('show'); 
-    });
-    
-    const nextSection = document.querySelector(nextSectionClass);
-    if (nextSection) {
-        nextSection.classList.add('show'); 
-    }
+const latest_news = document.querySelector('.latest-news');
+const new_news = document.querySelector('.news-news');
+const notice_news = document.querySelector('.notice-news');
+
+function showLatestNews() {
+    latest_news.classList.add('show');
+    new_news.classList.remove('show')
+    notice_news.classList.remove('show')
 }
 
-const navLinks = document.querySelectorAll('.nav-link');
+function showNewsNews() {
+    latest_news.classList.remove('show');
+    new_news.classList.add('show')
+    notice_news.classList.remove('show')
+}
 
-navLinks.forEach(link => {
-  link.addEventListener('click', function() {
-    navLinks.forEach(nav => nav.classList.remove('active'));
-
-    this.classList.add('active');
-  });
-});
+function showNoticeNews() {
+    latest_news.classList.remove('show');
+    new_news.classList.remove('show')
+    notice_news.classList.add('show')
+}
 
 const newsLinks = document.querySelectorAll('.news-link');
 

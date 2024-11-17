@@ -11,14 +11,13 @@ function toggleMenu() {
 }
 
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
-
-        document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
-        document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
-
-        this.classList.add('active');
-        const sectionId = this.getAttribute('data-section');
-        document.getElementById(sectionId).classList.add('active');
+        
+        document.querySelector('.nav-link.active')?.classList.remove('active');
+        document.querySelector('.content-section.active')?.classList.remove('active');
+        
+        link.classList.add('active');
+        document.getElementById(link.dataset.section).classList.add('active');
     });
 });
